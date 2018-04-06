@@ -2499,8 +2499,8 @@ find-up@^2.1.0:
     locate-path "^2.0.0"
 
 firebase-tools@^3.2.1:
-  version "3.18.0"
-  resolved "http://nexus.core.cvent.org:8081/nexus/content/groups/npm-public/firebase-tools/-/firebase-tools-3.18.0.tgz#083628e47216ce78bec16fe2ea3f338c11dc4eea"
+  version "3.18.1"
+  resolved "http://nexus.core.cvent.org:8081/nexus/content/groups/npm-public/firebase-tools/-/firebase-tools-3.18.1.tgz#24513b5e2f0eeae0fd78c30e5df5e018963fe3cd"
   dependencies:
     JSONStream "^1.2.1"
     archiver "^2.1.1"
@@ -6580,8 +6580,8 @@ url-parse@1.0.x:
     requires-port "1.0.x"
 
 url-parse@^1.1.8:
-  version "1.2.0"
-  resolved "http://nexus.core.cvent.org:8081/nexus/content/groups/npm-public/url-parse/-/url-parse-1.2.0.tgz#3a19e8aaa6d023ddd27dcc44cb4fc8f7fec23986"
+  version "1.3.0"
+  resolved "http://nexus.core.cvent.org:8081/nexus/content/groups/npm-public/url-parse/-/url-parse-1.3.0.tgz#04a06c420d22beb9804f7ada2d57ad13160a4258"
   dependencies:
     querystringify "~1.0.0"
     requires-port "~1.0.0"
