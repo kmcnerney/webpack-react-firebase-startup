@@ -37,7 +37,7 @@ module.exports = {
 
   module: {
     loaders: [
-      {enforce: "pre", test: /\.js$/, loaders: ['react-hot-loader', 'babel-loader?presets[]=react&presets[]=es2015', 'eslint-loader?configFile=.eslintrc'], exclude: /node_modules/},
+      {enforce: "pre", test: /\.jsx?$/, loaders: ['react-hot-loader', 'babel-loader', 'eslint-loader?configFile=.eslintrc'], exclude: /node_modules/},
       {test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'autoprefixer-loader', 'sass-loader'], exclude: /node_modules/},
       {test: /\.css$/, loaders: ['style-loader', 'css-loader', 'autoprefixer-loader']},
       {test: /\.less$/, loaders: ['style-loader', 'css-loader', 'less-loader']},
