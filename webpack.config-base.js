@@ -16,13 +16,13 @@ module.exports = {
 
   output: {
     // Where to build results
-    path: Path.join(__dirname, 'build/assets'),
+    path: Path.join(__dirname, 'build'),
 
     // Filename to use in HTML
     filename: 'bundle.js',
 
     // Path to use in HTML
-    publicPath: '/assets/'
+    publicPath: '/build/'
   },
 
   resolve: {

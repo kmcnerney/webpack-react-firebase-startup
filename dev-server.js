@@ -12,7 +12,7 @@ const host = '127.0.0.1'
 const port = 5000
 
 const server = express()
-server.use('/assets', proxy(url.parse(`http://${host}:${port}/assets`)))
+server.use('/build', proxy(url.parse(`http://${host}:${port}/build`)))
 
 server.get('/*', function(req, res) {   
   res.sendFile(__dirname + '/index.html')   
