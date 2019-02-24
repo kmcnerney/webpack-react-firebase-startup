@@ -59,7 +59,7 @@ export default class SignUpForm extends React.Component {
 					<FieldGroup
 						ref="comments"
 						id="comments"
-						componentClass="textarea"
+						as="textarea"
 						placeholder="Comments"
 					/>
 				</Row>
