@@ -1,4 +1,4 @@
-This repo is a quick start with everything you need and want for a full stack (React, Node, Firebase) project.
+This repo is a quick start with everything you need and want for a production-ready, full-stack (React, Node, Firebase) project.
 Please open an issue with any questions or suggestions.
 
 # Setup
