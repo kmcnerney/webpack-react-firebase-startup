@@ -5,26 +5,22 @@ import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 
 // Actions
-import { sendEmail } from '../actions/actions'
+import { saveUser } from '../actions/actions'
 
 // Components
-import { Form, Button, Row } from 'react-bootstrap'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
 import FieldGroup from './field-group'
 
 // Constants
 import Constants from '../constants.js'
 
 export default class SignUpForm extends React.Component {
-	constructor (props) {
-		super(props)
-
-		this.onSubmit = this.onSubmit.bind(this)
-	}
-
 	render () {
 		return (
-			<Form horizontal className={this.props.className} onSubmit={this.onSubmit}>
-				<h1 className="text-center">
+			<Form onSubmit={() => this.onSubmit()}>
+				<h1>
 					Join {Constants.PROJECT_NAME}!
 				</h1>
 				<Row className="col-xs-offset-3 col-xs-6">
@@ -67,7 +63,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="Comments"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6 text-center">
+				<Row className="col-xs-offset-3 col-xs-6">
 					<Button className="btn-primary" type="submit">
 						Email Us
 					</Button>
@@ -85,13 +81,9 @@ export default class SignUpForm extends React.Component {
 			comments: ReactDOM.findDOMNode(this.refs.comments).firstChild.value
 		}
 
-		sendEmail(info)
+		saveUser(info)
 
 		Backbone.history.navigate(Constants.LOG_IN_PAGE)
 		Backbone.history.loadUrl(Constants.LOG_IN_PAGE)
 	}
-}
-
-SignUpForm.propTypes = {
-	className: React.PropTypes.string
 }

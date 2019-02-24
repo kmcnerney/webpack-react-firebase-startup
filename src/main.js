@@ -9,14 +9,13 @@ import { Provider } from 'react-redux'
 import rootReducer from './reducers/root-reducer'
 
 // Styles
-import './less/main.less'
+import './sass/main.scss'
 
 // Components
 import NavBar from './components/nav-bar'
 import LogInForm from './components/log-in-form'
 import SignUpForm from './components/sign-up-form'
-import Dashboard from './components/dashboard'
-import Account from './components/account'
+import BankAccount from './components/bank-account'
 
 // Constants
 import Constants from './constants.js'
@@ -43,7 +42,6 @@ const Router = Backbone.Router.extend({
 		'': Constants.LOG_IN_PAGE,
 		logIn: Constants.LOG_IN_PAGE,
 		signUp: Constants.SIGN_UP_PAGE,
-		dashboard: Constants.DASHBOARD_PAGE,
 		account: Constants.ACCOUNT_PAGE
 	},
 
@@ -55,12 +53,8 @@ const Router = Backbone.Router.extend({
 		renderContent(Constants.SIGN_UP_PAGE, <SignUpForm />)
 	},
 
-	dashboard () {
-		renderContent(Constants.DASHBOARD_PAGE, <Dashboard />)
-	},
-
 	account () {
-		renderContent(Constants.ACCOUNT_PAGE, <Account />)
+		renderContent(Constants.ACCOUNT_PAGE, <BankAccount />)
 	}
 })
 

@@ -3,6 +3,7 @@
 const Base = require('./webpack.config-base')
 
 module.exports = {
+	mode: 'development',
 	entry: Base.entry,
 	output: Base.output,
 	resolve: Base.resolve,

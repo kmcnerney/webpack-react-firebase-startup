@@ -5,26 +5,22 @@ import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 
 // Actions
-import { saveAccount } from '../actions/actions'
+import { saveBankAccount } from '../actions/actions'
 
 // Components
-import { Form, Button, Row } from 'react-bootstrap'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import Row from 'react-bootstrap/Row'
 import FieldGroup from './field-group'
 
 // Constants
 import Constants from '../constants.js'
 
-export default class Account extends React.Component {
-	constructor (props) {
-		super(props)
-
-		this.onSubmit = this.onSubmit.bind(this)
-	}
-
+export default class BankAccount extends React.Component {
 	render () {
 		return (
-			<Form horizontal className={this.props.className} onSubmit={this.onSubmit}>
-				<h1 className="text-center">
+			<Form onSubmit={() => this.onSubmit()}>
+				<h1>
 					Account
 				</h1>
 				<Row className="col-xs-offset-3 col-xs-6">
@@ -59,7 +55,7 @@ export default class Account extends React.Component {
 						placeholder="Account Name"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6 text-center">
+				<Row className="col-xs-offset-3 col-xs-6">
 					<Button className="btn-primary" type="submit">
 						Save
 					</Button>
@@ -79,12 +75,8 @@ export default class Account extends React.Component {
 			accountName: ReactDOM.findDOMNode(this.refs.accountName).firstChild.value
 		}
 
-		saveAccount(info)
+		saveBankAccount(info)
 
 		Backbone.history.loadUrl(Constants.DASHBOARD_PAGE)
 	}
-}
-
-Account.propTypes = {
-	className: React.PropTypes.string
 }

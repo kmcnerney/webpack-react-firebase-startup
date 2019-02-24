@@ -1,13 +1,8 @@
-1) Install dependencies:
+# Setup
+Install a JavaScript package manager: `brew install yarn` (`npm` works, too)
 
-```
-yarn
-```
+Install dependencies: `yarn` or `npm install`
 
-2) Run dev server:
+Run dev server: `yarn start` or `npm start`
 
-```
-npm run dev
-```
-
-3) Go to localhost:5000 to view. Any code changes should be automatically reflected in the browser.
+Open localhost:8080 in a browser. Any code changes will be automatically reloaded.

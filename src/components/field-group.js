@@ -1,22 +1,24 @@
 'use strict'
 
 import React from 'react'
-import { FormGroup, FormControl, ControlLabel, HelpBlock } from 'react-bootstrap'
+import PropTypes from 'prop-types'
+import { Form } from 'react-bootstrap'
 
 export default class FieldGroup extends React.Component {
 	render () {
+		const { id, label, help, ...restProps } = this.props
 		return (
-			<FormGroup controlId={this.props.id}>
-				{this.props.label && <ControlLabel>{this.props.label}</ControlLabel>}
-				<FormControl {...this.props} />
-				{this.props.help && <HelpBlock>{this.props.help}</HelpBlock>}
-			</FormGroup>
+			<Form.Group controlId={id}>
+				<Form.Label>{label}</Form.Label>
+				<Form.Control {...restProps} />
+				<Form.Text className="text-muted">{help}</Form.Text>
+			</Form.Group>
 		)
 	}
 }
 
 FieldGroup.propTypes = {
-	id: React.PropTypes.string.isRequired,
-	label: React.PropTypes.string,
-	help: React.PropTypes.string
+	id: PropTypes.string.isRequired,
+	label: PropTypes.string,
+	help: PropTypes.string
 }

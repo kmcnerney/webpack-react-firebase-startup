@@ -4,10 +4,10 @@ export function logIn (email, password) {
 	console.log('logging in...')
 }
 
-export function sendEmail (info) {
+export function saveUser (info) {
 	console.log('sending email...')
 }
 
-export function saveAccount (info) {
+export function saveBankAccount (info) {
 	console.log('saving account...')
 }
