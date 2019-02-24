@@ -17,9 +17,12 @@
     "kmcnerney",
     "webpack",
     "react",
+    "redux",
+    "backbone",
     "firebase",
     "hot",
-    "reloading"
+    "reloading",
+    "starter"
   ],
   "author": "Kevin McNerney",
   "license": "ISC",
