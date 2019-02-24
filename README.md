@@ -2,7 +2,7 @@ This repo is a quick start with everything you need and want for a full stack (R
 Please open an issue with any questions or suggestions.
 
 # Setup
-Install a JavaScript package manager, for example yarn (on Mac: `brew install yarn`). npm works, too
+Install a JavaScript package manager, for example yarn (on Mac: `brew install yarn`). npm works too
 
 Install dependencies: `yarn` or `npm install`
 
