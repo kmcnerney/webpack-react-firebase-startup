@@ -3,7 +3,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
-import PropTypes from 'prop-types'
 
 // Actions
 import { saveBankAccount } from '../actions/actions'
@@ -18,16 +17,10 @@ import FieldGroup from './field-group'
 import Constants from '../constants.js'
 
 export default class BankAccount extends React.Component {
-	constructor (props) {
-		super(props)
-
-		this.onSubmit = this.onSubmit.bind(this)
-	}
-
 	render () {
 		return (
-			<Form horizontal className={this.props.className} onSubmit={this.onSubmit}>
-				<h1 className="text-center">
+			<Form onSubmit={() => this.onSubmit()}>
+				<h1>
 					Account
 				</h1>
 				<Row className="col-xs-offset-3 col-xs-6">
@@ -62,7 +55,7 @@ export default class BankAccount extends React.Component {
 						placeholder="Account Name"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6 text-center">
+				<Row className="col-xs-offset-3 col-xs-6">
 					<Button className="btn-primary" type="submit">
 						Save
 					</Button>
@@ -86,8 +79,4 @@ export default class BankAccount extends React.Component {
 
 		Backbone.history.loadUrl(Constants.DASHBOARD_PAGE)
 	}
-}
-
-BankAccount.propTypes = {
-	className: PropTypes.string
 }
