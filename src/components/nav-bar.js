@@ -4,8 +4,11 @@ import _ from 'lodash'
 
 import React from 'react'
 import Backbone from 'backbone'
+import PropTypes from 'prop-types'
 
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavItem from 'react-bootstrap/NavItem'
 
 // Constants
 import Constants from '../constants.js'
@@ -44,5 +47,5 @@ export default class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-	page: React.PropTypes.string
+	page: PropTypes.string
 }

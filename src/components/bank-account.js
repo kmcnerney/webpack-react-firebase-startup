@@ -6,7 +6,7 @@ import Backbone from 'backbone'
 import PropTypes from 'prop-types'
 
 // Actions
-import { saveUser } from '../actions/actions'
+import { saveBankAccount } from '../actions/actions'
 
 // Components
 import Form from 'react-bootstrap/Form'
@@ -17,7 +17,7 @@ import FieldGroup from './field-group'
 // Constants
 import Constants from '../constants.js'
 
-export default class SignUpForm extends React.Component {
+export default class BankAccount extends React.Component {
 	constructor (props) {
 		super(props)
 
@@ -28,51 +28,46 @@ export default class SignUpForm extends React.Component {
 		return (
 			<Form horizontal className={this.props.className} onSubmit={this.onSubmit}>
 				<h1 className="text-center">
-					Join {Constants.PROJECT_NAME}!
+					Account
 				</h1>
 				<Row className="col-xs-offset-3 col-xs-6">
 					<FieldGroup
-						ref="firstName"
-						id="firstName"
+						ref="bankName"
+						id="bankName"
 						type="text"
-						placeholder="First Name"
+						placeholder="Bank Name"
 					/>
 				</Row>
 				<Row className="col-xs-offset-3 col-xs-6">
 					<FieldGroup
-						ref="lastName"
-						id="lastName"
+						ref="accountNumber"
+						id="accountNumber"
 						type="text"
-						placeholder="Last Name"
+						placeholder="Account Number"
 					/>
 				</Row>
 				<Row className="col-xs-offset-3 col-xs-6">
 					<FieldGroup
-						ref="organization"
-						id="organization"
+						ref="routingNumber"
+						id="routingNumber"
 						type="text"
-						placeholder="Organization"
+						placeholder="Routing Number"
 					/>
 				</Row>
 				<Row className="col-xs-offset-3 col-xs-6">
 					<FieldGroup
-						ref="email"
-						id="email"
-						type="email"
-						placeholder="Email"
-					/>
-				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
-					<FieldGroup
-						ref="comments"
-						id="comments"
-						componentClass="textarea"
-						placeholder="Comments"
+						ref="accountName"
+						id="accountName"
+						type="accountName"
+						placeholder="Account Name"
 					/>
 				</Row>
 				<Row className="col-xs-offset-3 col-xs-6 text-center">
 					<Button className="btn-primary" type="submit">
-						Email Us
+						Save
+					</Button>
+					<Button className="col-xs-offset-1 btn-secondary" type="submit">
+						Cancel
 					</Button>
 				</Row>
 			</Form>
@@ -81,20 +76,18 @@ export default class SignUpForm extends React.Component {
 
 	onSubmit () {
 		const info = {
-			firstName: ReactDOM.findDOMNode(this.refs.firstName).firstChild.value,
-			lastName: ReactDOM.findDOMNode(this.refs.lastName).firstChild.value,
-			organization: ReactDOM.findDOMNode(this.refs.organization).firstChild.value,
-			email: ReactDOM.findDOMNode(this.refs.email).firstChild.value,
-			comments: ReactDOM.findDOMNode(this.refs.comments).firstChild.value
+			bankName: ReactDOM.findDOMNode(this.refs.bankName).firstChild.value,
+			accountNumber: ReactDOM.findDOMNode(this.refs.accountNumber).firstChild.value,
+			routingNumber: ReactDOM.findDOMNode(this.refs.routingNumber).firstChild.value,
+			accountName: ReactDOM.findDOMNode(this.refs.accountName).firstChild.value
 		}
 
-		saveUser(info)
+		saveBankAccount(info)
 
-		Backbone.history.navigate(Constants.LOG_IN_PAGE)
-		Backbone.history.loadUrl(Constants.LOG_IN_PAGE)
+		Backbone.history.loadUrl(Constants.DASHBOARD_PAGE)
 	}
 }
 
-SignUpForm.propTypes = {
+BankAccount.propTypes = {
 	className: PropTypes.string
 }
