@@ -1,3 +1,6 @@
+This repo is a quick start with everything you need and want for a full stack (React, Node, Firebase) project.
+Please open an issue with any questions or suggestions.
+
 # Setup
 Install a JavaScript package manager: `brew install yarn` (`npm` works, too)
 
