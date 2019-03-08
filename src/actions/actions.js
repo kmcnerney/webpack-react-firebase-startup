@@ -7,7 +7,3 @@ export function logIn (email, password) {
 export function saveUser (info) {
 	console.log('sending email...')
 }
-
-export function saveBankAccount (info) {
-	console.log('saving account...')
-}

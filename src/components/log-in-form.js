@@ -19,12 +19,8 @@ import Constants from '../constants.js'
 export default class LogInForm extends React.Component {
 	render () {
 		return (
-			<Form onSubmit={() => this.onSubmit()}>
-				<img alt="logo" src="https://bit.ly/2U636DA" />
-				<h1>
-					Project
-				</h1>
-				<Row className="col-xs-offset-3 col-xs-6">
+			<Form className="container" onSubmit={() => this.onSubmit()}>
+				<Row>
 					<FieldGroup
 						ref="email"
 						id="email"
@@ -32,7 +28,7 @@ export default class LogInForm extends React.Component {
 						placeholder="Email"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="password"
 						id="password"
@@ -40,7 +36,7 @@ export default class LogInForm extends React.Component {
 						placeholder="Password"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<Button className="btn-primary" type="submit">
 						Log In
 					</Button>

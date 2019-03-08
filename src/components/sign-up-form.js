@@ -19,11 +19,11 @@ import Constants from '../constants.js'
 export default class SignUpForm extends React.Component {
 	render () {
 		return (
-			<Form onSubmit={() => this.onSubmit()}>
+			<Form className="container" onSubmit={() => this.onSubmit()}>
 				<h1>
 					Join {Constants.PROJECT_NAME}!
 				</h1>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="firstName"
 						id="firstName"
@@ -31,7 +31,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="First Name"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="lastName"
 						id="lastName"
@@ -39,7 +39,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="Last Name"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="organization"
 						id="organization"
@@ -47,7 +47,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="Organization"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="email"
 						id="email"
@@ -55,7 +55,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="Email"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<FieldGroup
 						ref="comments"
 						id="comments"
@@ -63,7 +63,7 @@ export default class SignUpForm extends React.Component {
 						placeholder="Comments"
 					/>
 				</Row>
-				<Row className="col-xs-offset-3 col-xs-6">
+				<Row>
 					<Button className="btn-primary" type="submit">
 						Email Us
 					</Button>

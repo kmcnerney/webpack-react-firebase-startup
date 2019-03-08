@@ -15,7 +15,6 @@ import './sass/main.scss'
 import NavBar from './components/nav-bar'
 import LogInForm from './components/log-in-form'
 import SignUpForm from './components/sign-up-form'
-import BankAccount from './components/bank-account'
 
 // Constants
 import Constants from './constants.js'
@@ -51,10 +50,6 @@ const Router = Backbone.Router.extend({
 
 	signUp () {
 		renderContent(Constants.SIGN_UP_PAGE, <SignUpForm />)
-	},
-
-	account () {
-		renderContent(Constants.ACCOUNT_PAGE, <BankAccount />)
 	}
 })
 
